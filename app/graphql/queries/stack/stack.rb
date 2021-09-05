@@ -1,6 +1,6 @@
 module Queries
   module Stack
-    class GetStack < Queries::BaseQuery
+    class Stack < Queries::BaseQuery
       argument :id, ID, required: true
       type Types::Stack::StackType, null: true
 

@@ -11,27 +11,27 @@ module Types
           {
             id: 1,
             name: 'React',
-            image_path: ''
+            image_path: Rails.root.join("public/images/stacks/react.png")
           },
           {
             id: 2,
             name: 'Rails',
-            image_path: ''
+            image_path: Rails.root.join("public/images/stacks/rails.png")
           },
           {
             id: 3,
             name: 'Swift',
-            image_path: ''
+            image_path: Rails.root.join("public/images/stacks/swift.png")
           },
           {
             id: 4,
             name: 'GraphQl',
-            image_path: ''
+            image_path: Rails.root.join("public/images/stacks/graphql.png")
           },
           {
             id: 5,
             name: 'Mysql',
-            image_path: ''
+            image_path: Rails.root.join("public/images/stacks/mysql.png")
           }
         ]
       end
