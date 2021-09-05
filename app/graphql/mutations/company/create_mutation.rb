@@ -1,13 +1,21 @@
-module Mutations
-  module Company
-    class CreateMutation < Mutations::BaseMutation
-      argument_class Types::Company::CreateInputType
-      argument :input, Types::Company::CreateInputType, required: true
+module Mutations::Company
+  class CreateMutation < Mutations::BaseMutation
+    argument :input, Types::Company::CreateInputType, required: true
 
-      def resolve(input:)
-        ActiveRecord::Base.transaction do
-          { company: Company.create!(name: input[:name]) }
-        end
+    field :company, Types::CompanyType, null: true
+
+    def resolve(input:)
+      ActiveRecord::Base.transaction do
+        company = Company.create!(name: name)
+        {
+          company: company,
+          errors: []
+        }
+      rescue ActiveRecord::RecordInvalid
+        {
+          company: nil,
+          errors: company.errors.full_messages
+        }
       end
     end
   end

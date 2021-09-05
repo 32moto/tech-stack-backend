@@ -1,15 +1,14 @@
 # == Schema Information
 #
-# Table name: company_stack_maps
+# Table name: company_images
 #
 #  id         :bigint           not null, primary key
 #  company_id :integer          not null
-#  stack_id   :integer          not null
+#  path       :string(255)      not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class CompanyStackMap < ApplicationRecord
+class CompanyImage < ApplicationRecord
   belongs_to :company
-  belongs_to :stack
 end
