@@ -2,11 +2,11 @@ module Mutations::Company
   class CreateMutation < Mutations::BaseMutation
     argument :input, Types::Company::CreateInputType, required: true
 
-    field :company, Types::CompanyType, null: false
+    field :company, Types::Company::CompanyType, null: false
 
     def resolve(input:)
       ActiveRecord::Base.transaction do
-        company = Company.create!(name: input[:name])
+        company = ::Company.create!(name: input[:name])
         {
           company: company,
           errors: []
