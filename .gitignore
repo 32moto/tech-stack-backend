@@ -33,3 +33,6 @@
 
 # Ignore env
 .env.*
+
+# Ignore .idea/
+/.idea
