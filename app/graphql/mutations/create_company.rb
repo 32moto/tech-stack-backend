@@ -1,14 +1,13 @@
 module Mutations
   class CreateCompany < Mutations::BaseMutation
-    argument :id, ID, required: true
-    type Types::CompanyType, null: true
+    field :company, Types::CompanyType, null: false
+    argument :input, Types::Company::CreateInputType, required: true
 
-    def resolve(id:)
-      company_mock = {
-          id: 1,
-          name: 'dev tech stack',
-          default_image_path: ''
-      }
+    def resolve(input:)
+      ActiveRecord::Base.transaction do
+        company = Company.create!(name: input[:name])
+        company
+      end
     end
   end
 end

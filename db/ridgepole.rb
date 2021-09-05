@@ -2,13 +2,11 @@
 
 create_table "companies", force: :cascade do |t|
   t.string   :name,               limit: 255, null: false
-  t.string   :default_image_path, limit: 255
   t.timestamps
 end
 
 create_table "stacks", force: :cascade do |t|
   t.string   :name,               limit: 255, null: false
-  t.string   :default_image_path, limit: 255
   t.timestamps
 end
 
