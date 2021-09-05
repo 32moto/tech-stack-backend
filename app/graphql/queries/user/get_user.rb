@@ -1,6 +1,6 @@
 module Queries
   module User
-    class User < Queries::BaseQuery
+    class GetUser < Queries::BaseQuery
       argument :id, ID, required: true
       type Types::User::UserType, null: true
 
