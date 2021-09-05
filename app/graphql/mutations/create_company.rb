@@ -1,5 +1,5 @@
 module Mutations
-  class Mutation::Company < BaseMutation
+  class CreateCompany < Mutations::BaseMutation
     argument :id, ID, required: true
     type Types::CompanyType, null: true
 

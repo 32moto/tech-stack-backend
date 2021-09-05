@@ -5,6 +5,9 @@ module Types
     field :default_image_path, String, null: true
     field :stacks, [Types::StackType], null: true
 
+    # Mutations
+    field :create_company, mutation: Mutations::CreateCompany, null: false
+
     def stacks
       [
         {
