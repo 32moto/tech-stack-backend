@@ -7,7 +7,8 @@ module Queries
       def resolve(id:)
         {
           id: 1,
-          name: 'devs tech stack'
+          name: 'devs tech stack',
+          image_path: nil
         }
       end
     end
