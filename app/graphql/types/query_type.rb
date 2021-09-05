@@ -8,8 +8,8 @@ module Types
     # They will be entry points for queries on your schema.
 
     # field :company, resolver: Queries::Company
-    field :get_company, resolver: Queries::Company::GetCompany
-    field :get_stack, resolver: Queries::Stack::GetStack
-    field :get_user, resolver: Queries::User::GetUser
+    field :company, resolver: Queries::Company::Company
+    field :stack, resolver: Queries::Stack::Stack
+    field :user, resolver: Queries::User::User
   end
 end

@@ -11,28 +11,28 @@ module Types
         [
           {
             id: 1,
-            name: 'スタメン',
-            image_path: ''
+            name: 'stmn',
+            image_path: nil
           },
           {
             id: 2,
             name: 'Google',
-            image_path: ''
+            image_path: nil
           },
           {
             id: 3,
             name: 'Amazon',
-            image_path: ''
+            image_path: nil
           },
           {
             id: 4,
             name: 'Apple',
-            image_path: ''
+            image_path: nil
           },
           {
             id: 5,
             name: 'Facebook',
-            image_path: ''
+            image_path: nil
           }
         ]
       end
