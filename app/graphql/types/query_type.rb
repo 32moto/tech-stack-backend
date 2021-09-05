@@ -10,5 +10,6 @@ module Types
     # field :company, resolver: Queries::Company
     field :company, resolver: Queries::Company
     field :stack, resolver: Queries::Stack
+    field :user, resolver: Queries::User::User
   end
 end

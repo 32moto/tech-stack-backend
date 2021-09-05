@@ -6,8 +6,7 @@ module Queries
     def resolve(id:)
       stack_mock = {
         id: 1,
-        name: 'dev tech stack',
-        default_image_path: ''
+        name: 'React'
       }
     end
   end
