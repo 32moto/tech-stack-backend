@@ -7,7 +7,8 @@ module Queries
       def resolve(id:)
         {
           id: 1,
-          name: 'React'
+          name: 'React',
+          image_path: ActionController::Base.helpers.asset_path("/images/stacks/react.png")
         }
       end
     end

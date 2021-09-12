@@ -8,7 +8,7 @@ module Queries
         {
           id: 1,
           name: 'devs tech stack',
-          image_path: nil
+          image_path: ActionController::Base.helpers.asset_path("/images/yunboo.jpeg")
         }
       end
     end
