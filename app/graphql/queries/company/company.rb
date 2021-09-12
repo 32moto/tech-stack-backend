@@ -8,7 +8,7 @@ module Queries
         {
           id: 1,
           name: 'stmn',
-          image_path: ActionController::Base.helpers.asset_path("/images/stmn.jpeg")
+          image_path: ActionController::Base.helpers.asset_path("/images/companies/stmn.jpeg")
         }
       end
     end
