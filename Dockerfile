@@ -1,4 +1,4 @@
-FROM ruby:2.6.5
+FROM ruby:3.0.0
 RUN apt-get update -qq && \
     apt-get install -y build-essential \
                        libpq-dev \
@@ -8,8 +8,10 @@ RUN apt-get update -qq && \
 RUN mkdir /backend
 WORKDIR /backend
 
-COPY Gemfile Gemfile.lock ./
-RUN gem install bundler
+RUN gem install bundler -v 2.2.27
+COPY Gemfile ./
+RUN touch Gemfile.lock
+RUN bundle update --bundler
 RUN bundle install
 
 COPY entrypoint.sh /usr/bin/
