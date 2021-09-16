@@ -14,4 +14,9 @@ class Company < ApplicationRecord
   has_many :stacks, through: :company_stack_maps
 
   validates :name, presence: true
+
+  # TODO: Delete
+  def type_sample
+    'type_sample'
+  end
 end
