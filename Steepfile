@@ -26,11 +26,14 @@
 #   # library "pathname", "set"       # Standard libraries
 # end
 
-target :lib do
+target :app do
   repo_path "vendor/rbs/gem_rbs_collection/gems"
-  check "lib"
   signature "sig"
-  
+  check "app"
+  ignore "app/controllers/graphql_controller.rb"
+  ignore "app/graphql"
+  ignore "app/mailers"
+
   library 'pathname'
   library 'logger'
   library 'mutex_m'
