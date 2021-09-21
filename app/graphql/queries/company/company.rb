@@ -5,11 +5,7 @@ module Queries
       type Types::Company::CompanyType, null: true
 
       def resolve(id:)
-        {
-          id: 1,
-          name: 'stmn',
-          image_path: ActionController::Base.helpers.asset_path("/images/companies/stmn.jpeg")
-        }
+        ::Company.find(id)
       end
     end
   end

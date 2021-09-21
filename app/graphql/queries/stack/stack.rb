@@ -5,11 +5,7 @@ module Queries
       type Types::Stack::StackType, null: true
 
       def resolve(id:)
-        {
-          id: 1,
-          name: 'React',
-          image_path: ActionController::Base.helpers.asset_path("/images/stacks/react.png")
-        }
+        ::Stack.find(id)
       end
     end
   end

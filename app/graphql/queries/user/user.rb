@@ -5,11 +5,7 @@ module Queries
       type Types::User::UserType, null: true
 
       def resolve(id:)
-        {
-          id: 1,
-          name: 'devs tech stack',
-          image_path: ActionController::Base.helpers.asset_path("/images/yunboo.jpeg")
-        }
+        ::User.find(id)
       end
     end
   end

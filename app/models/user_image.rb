@@ -13,5 +13,5 @@
 #  index_user_images_on_user_id  (user_id)
 #
 class UserImage < ApplicationRecord
-  belongs_to :company
+  belongs_to :user
 end
