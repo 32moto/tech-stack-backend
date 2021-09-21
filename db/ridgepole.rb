@@ -33,6 +33,12 @@ create_table 'users', force: :cascade do |t|
   t.timestamps
 end
 
+create_table 'user_images', force: :cascade do |t|
+  t.references :user,  null: false
+  t.string   :path, limit: 255, null: false
+  t.timestamps
+end
+
 create_table 'user_stack_maps', force: :cascade do |t|
   t.references :user,  null: false
   t.references :stack, null: false

@@ -15,8 +15,8 @@ class Company < ApplicationRecord
 
   validates :name, presence: true
 
-  # TODO: Delete
-  def type_sample
-    'type_sample'
+  def image_path
+    return '' if image.blank?
+    image.path
   end
 end

@@ -13,4 +13,9 @@ class User < ApplicationRecord
   has_many :stacks, through: :user_stack_maps
 
   validates :name, presence: true
+
+  def image_path
+    return '' if image.blank?
+    image.path
+  end
 end
