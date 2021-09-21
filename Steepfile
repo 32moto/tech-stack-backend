@@ -26,12 +26,10 @@
 #   # library "pathname", "set"       # Standard libraries
 # end
 
-target :app do
-  signature 'sig'
+target :lib do
+  repo_path "vendor/rbs/gem_rbs_collection/gems"
+  check "lib"
+  signature "sig"
 
-  check 'app'
-
-  library 'pathname'
-  library 'logger'
-  library 'mutex_m'
+  library "set", "pathname"
 end
