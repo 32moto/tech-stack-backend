@@ -1,5 +1,4 @@
-# D = Steep::Diagnostic
-#
+
 # target :lib do
 #   signature "sig"
 #
@@ -10,45 +9,21 @@
 #
 #   # library "pathname", "set"       # Standard libraries
 #   # library "strong_json"           # Gems
-#
-#   # configure_code_diagnostics(D::Ruby.strict)       # `strict` diagnostics setting
-#   # configure_code_diagnostics(D::Ruby.lenient)      # `lenient` diagnostics setting
-#   # configure_code_diagnostics do |hash|             # You can setup everything yourself
-#   #   hash[D::Ruby::NoMethod] = :information
-#   # end
 # end
 
-# target :test do
+# target :spec do
 #   signature "sig", "sig-private"
 #
-#   check "test"
+#   check "spec"
 #
 #   # library "pathname", "set"       # Standard libraries
+#   # library "rspec"
 # end
-
 target :app do
-  signature 'sig'
+  signature "sig"
+  check "app"
 
-    check 'app'
-
-    repo_path "path/to/rbs_repo"
-
-    library 'pathname'
-    library 'logger'
-    library 'mutex_m'
-    library 'date'
-    library 'monitor'
-    library 'singleton'
-    library 'tsort'
-    library 'time'
-
-    library 'rack'
-
-    library 'activesupport'
-    library 'actionpack'
-    library 'activejob'
-    library 'activemodel'
-    library 'actionview'
-    library 'activerecord'
-    library 'railties'
+  library 'pathname'
+  library 'logger'
+  library 'mutex_m'
 end
