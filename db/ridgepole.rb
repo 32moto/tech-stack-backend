@@ -22,6 +22,12 @@ create_table 'stack_images', force: :cascade do |t|
   t.timestamps
 end
 
+create_table 'company_user_maps', force: :cascade do |t|
+  t.references :company,  null: false
+  t.references :user,  null: false
+  t.timestamps
+end
+
 create_table 'company_stack_maps', force: :cascade do |t|
   t.integer :company_id, null: false
   t.integer :stack_id,   null: false
