@@ -5,6 +5,7 @@ module Types
       field :name, String, null: true
       field :image_path, String, null: true
       field :stacks, [Types::Stack::StackType], null: true
+      field :users, [Types::User::UserType], null:true
     end
   end
 end

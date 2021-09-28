@@ -10,7 +10,9 @@
 
 class Company < ApplicationRecord
   has_one :image, class_name: 'CompanyImage'
+  has_many :company_user_maps
   has_many :company_stack_maps
+  has_many :users, through: :company_user_maps
   has_many :stacks, through: :company_stack_maps
 
   validates :name, presence: true
