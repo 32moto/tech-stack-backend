@@ -2,7 +2,7 @@ module Mutations::CompanyStackMap
   class CreateMutation < Mutations::BaseMutation
     argument :input, Types::CompanyStackMap::CreateInputType, required: true
 
-    field :status, String, null: true
+    field :status, String, null: false
 
     def resolve(input:)
       ActiveRecord::Base.transaction do
@@ -12,11 +12,6 @@ module Mutations::CompanyStackMap
         {
           status: 'ok',
           errors: []
-        }
-      rescue ActiveRecord::RecordInvalid
-        {
-          status: '',
-          errors: company_stack_map.errors.full_messages
         }
       end
     end
