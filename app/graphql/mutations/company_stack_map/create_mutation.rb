@@ -1,6 +1,6 @@
-module Mutations::Company
-  class CreateCompanyStackMapMutation < Mutations::BaseMutation
-    argument :input, Types::Company::CreateCompanyStackMapInputType, required: true
+module Mutations::CompanyStackMap
+  class CreateMutation < Mutations::BaseMutation
+    argument :input, Types::CompanyStackMap::CreateInputType, required: true
 
     field :status, String, null: true
 
